@@ -18,10 +18,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.SignInActivity">
+        <activity
+            android:name=".activity.SignInActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
 
-        <activity android:name=".activity.SignUpActivity">
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:windowSoftInputMode="stateHidden">
         </activity>
 
     </application>

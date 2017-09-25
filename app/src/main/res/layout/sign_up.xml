@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,145 +7,178 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/sign_up_background"
+        android:id="@+id/sign_in_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/launch" />
+        app:srcCompat="@drawable/launch"/>
 
-    <ImageView
-        android:id="@+id/sign_up_logo"
-        android:layout_width="274dp"
-        android:layout_height="64dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@drawable/logo" />
-
-    <com.telemetry.outputsleepapp.font.SomeTextView
-        android:id="@+id/sign_up_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Sign UP"
-        android:textColor="#119ecc"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_logo" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
-        android:id="@+id/linearLayout">
-
-        <com.telemetry.outputsleepapp.font.SomeEditText
-            android:id="@+id/sign_up_first_name"
-            android:layout_width="188dp"
-            android:layout_height="39dp"
-            android:layout_gravity="left"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/purple_btn_image"
-            android:hint="First Name"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
-
-        <com.telemetry.outputsleepapp.font.SomeEditText
-            android:id="@+id/sign_up_last_name"
-            android:layout_width="188dp"
-            android:layout_height="39dp"
-            android:layout_gravity="left"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/purple_btn_image"
-            android:hint="Last Name"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
-
-        <com.telemetry.outputsleepapp.font.SomeEditText
-            android:id="@+id/sign_up_email"
-            android:layout_width="234dp"
-            android:layout_height="44dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="4dp"
-            android:background="@drawable/green_btn_image"
-            android:hint="Email"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
-
-        <com.telemetry.outputsleepapp.font.SomeEditText
-            android:id="@+id/sign_up_password"
-            android:layout_width="234dp"
-            android:layout_height="44dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="4dp"
-            android:background="@drawable/green_btn_image"
-            android:hint="Password"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textColorHint="#fff" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/sign_up_checkbox_on"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/checkbox_off" />
-
-            <com.telemetry.outputsleepapp.font.SomeTextView
-                android:id="@+id/sign_up_agree_to_the_terms"
+                android:id="@+id/sign_in_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:text="I Agree to the terms of Service"
-                android:textSize="14sp"
-                android:textColor="#354368" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="120dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/logo" />
+
+            <com.telemetry.outputsleepapp.font.SomeTextView
+                android:id="@+id/sign_up_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/sign_up"
+                android:textColor="#119ecc"
+                android:textSize="25sp"
+                android:onClick="onClick" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_marginBottom="40dp">
+
+                <com.telemetry.outputsleepapp.font.SomeEditText
+                    android:id="@+id/sign_up_first_name"
+                    android:layout_width="188dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/purple_btn_image"
+                    android:hint="@string/first_name"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <com.telemetry.outputsleepapp.font.SomeEditText
+                    android:id="@+id/sign_up_last_name"
+                    android:layout_width="188dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/purple_btn_image"
+                    android:hint="@string/last_name"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <com.telemetry.outputsleepapp.font.SomeEditText
+                    android:id="@+id/sign_up_email"
+                    android:layout_width="234dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/green_btn_image"
+                    android:hint="@string/email"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <com.telemetry.outputsleepapp.font.SomeEditText
+                    android:id="@+id/sign_up_password"
+                    android:layout_width="234dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/green_btn_image"
+                    android:hint="@string/password"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <LinearLayout
+                    android:id="@+id/sign_up_agree_to_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sign_up_checkbox"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/checkbox_off"
+                        android:onClick="onClick" />
+
+                    <com.telemetry.outputsleepapp.font.SomeTextView
+                        android:id="@+id/sign_up_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/agree"
+                        android:textSize="14sp"
+                        android:textColor="#354368" />
+
+                    <com.telemetry.outputsleepapp.font.SomeTextView
+                        android:id="@+id/sign_up_the_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/the_terms"
+                        android:layout_marginLeft="3sp"
+                        android:textSize="14sp"
+                        android:textColor="#354368"
+                        android:onClick="onClick" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sign_up_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:onClick="onClick"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/sign_up_facebook_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/facebook_icon" />
+
+                    <com.telemetry.outputsleepapp.font.SomeTextView
+                        android:id="@+id/sign_in_with_facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+
+                        android:text="@string/facebook"
+                        android:textSize="14sp"
+                        android:textColor="#3c599b" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+    </ScrollView>
 
-            <ImageView
-                android:id="@+id/sign_up_facebook_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/facebook_icon" />
-
-            <com.telemetry.outputsleepapp.font.SomeTextView
-                android:id="@+id/sign_in_with_facebook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:text="Sign In with Facebook"
-                android:textSize="14sp"
-                android:textColor="#3c599b" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>

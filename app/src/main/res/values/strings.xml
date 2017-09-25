@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Output Sleep App</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="agree">I Agree to the</string>
+    <string name="the_terms"><u>terms of Service</u></string>
+    <string name="facebook">Sign In with Facebook</string>
+
 </resources>
